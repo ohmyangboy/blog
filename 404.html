@@ -88,8 +88,12 @@ footer { margin-top: 4rem; text-align: center; }
 .markdown tbody tr:nth-child(even) td { background-color: var(--code-bg); }
 .markdown hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 .markdown :not(pre) > code { white-space: nowrap; }
-.markdown img { display: block; max-width: 100%; height: auto; margin-inline: auto; border: 1px solid var(--border); border-radius: 8px; }
+.markdown img { display: block; max-width: 100%; height: auto; margin-inline: auto; border: 1px solid var(--border); border-radius: 8px; cursor: zoom-in; }
 .markdown .missing-image { display: inline-block; padding: 0.5rem 0.75rem; border: 1px dashed var(--border); border-radius: 6px; color: var(--subtext); background: var(--code-bg); font-size: 0.875rem; }
+.image-lightbox { width: 100vw; max-width: none; height: 100vh; max-height: none; padding: 3rem; border: 0; background: transparent; overflow: hidden; }
+.image-lightbox::backdrop { background: rgba(0, 0, 0, 0.82); backdrop-filter: blur(6px); }
+.image-lightbox img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.image-lightbox-close { position: fixed; top: 1rem; right: 1rem; width: 2.5rem; height: 2.5rem; border: 0; border-radius: 999px; background: rgba(0, 0, 0, 0.62); color: white; font-size: 1.5rem; line-height: 1; cursor: pointer; }
 .task-list-item { list-style: none; margin-left: -1.25rem; }
 .task-list-item input { margin-right: 0.4rem; accent-color: var(--primary); }
 @media (max-width: 640px) { body { padding: 2.5rem 1.5rem; } .post-item { align-items: flex-start; gap: 0.5rem; } .back-icon { left: -1.5rem; } }
@@ -170,4 +174,4 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .syntax-highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .syntax-highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .syntax-highlight .il { color: #666 } /* Literal.Number.Integer.Long */
-.syntax-highlight { background: transparent !important; }</style></head><body><div class="container"><main><h1>Not found</h1></main></div><footer><a href="https://github.com/ohmyangboy/blog" target="_blank" rel="noopener noreferrer" class="footer-brand">Paper Blog</a></footer></body></html>
+.syntax-highlight { background: transparent !important; }</style></head><body><div class="container"><main><h1>Not found</h1></main></div><footer><a href="https://ohmyangboy.github.io/paper-blog/" target="_blank" rel="noopener noreferrer" class="footer-brand">Paper Blog</a></footer><dialog class="image-lightbox" aria-label="图片大图预览"><button class="image-lightbox-close" type="button" aria-label="关闭大图">×</button><img alt=""></dialog><script>(()=>{const d=document.querySelector('.image-lightbox');const v=d.querySelector('img');document.addEventListener('click',e=>{const i=e.target.closest?.('.markdown img');if(!i||i.closest('a'))return;const s=i.currentSrc||i.src;if(typeof d.showModal!=='function'){window.open(s,'_blank','noopener');return}v.src=s;v.alt=i.alt||'';d.showModal()});d.querySelector('.image-lightbox-close').addEventListener('click',()=>d.close());d.addEventListener('click',e=>{if(e.target===d)d.close()});d.addEventListener('close',()=>{v.removeAttribute('src')})})();</script></body></html>
