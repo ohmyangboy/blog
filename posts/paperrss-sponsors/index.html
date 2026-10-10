@@ -113,11 +113,12 @@ footer { margin-top: 4rem; text-align: center; }
 .markdown tbody tr:nth-child(even) td { background-color: var(--code-bg); }
 .markdown hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 .markdown :not(pre) > code { white-space: nowrap; }
-.markdown img { display: block; max-width: 100%; height: auto; margin-inline: auto; border: 0; border-radius: var(--image-radius, 8px); cursor: zoom-in; }
+.markdown img { display: block; max-width: 100%; height: auto; margin-inline: auto; border: 1px solid var(--border); border-radius: var(--image-radius, 8px); cursor: zoom-in; }
 .markdown .paper-iframe { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; border: 0; margin-inline: auto; }
 .markdown img[data-align="left"], .markdown img.align-left { margin-left: 0; margin-right: auto; }
 .markdown img[data-align="right"], .markdown img.align-right { margin-left: auto; margin-right: 0; }
 .markdown img[data-align="center"], .markdown img.align-center { margin-inline: auto; }
+.markdown img.inline-image { display: inline-block; margin: 0; vertical-align: middle; border: 0; border-radius: 0; }
 .markdown .missing-image { display: inline-block; padding: 0.5rem 0.75rem; border: 1px dashed var(--border); border-radius: 6px; color: var(--subtext); background: var(--code-bg); font-size: 0.875rem; }
 .markdown .image-group { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem; width: 120%; max-width: 120%; margin-left: -10%; margin-right: -10%; margin-top: 1.5rem; margin-bottom: 1.5rem; box-sizing: border-box; }
 .markdown .image-group img { display: block; max-width: 100%; height: auto; margin: 0; flex: 0 1 auto; }
@@ -245,17 +246,6 @@ body.paper-video-expanded { overflow: hidden; }
 @media (max-width: 640px) { .paper-video { width: 100%; max-width: 100%; } }
 @media (max-width: 480px) { .paper-video[data-enhanced] .video-controls { bottom: 8px; gap: 4px; width: calc(100% - 16px); padding: 4px 6px; } .paper-video button { width: 32px; height: 32px; } .paper-video .video-time { font-size: 10px; } .paper-video[data-enhanced] .video-start { width: 48px; height: 48px; } }
 @media (prefers-reduced-motion: reduce) { .paper-video .video-controls { transition: none; } }
-
-.footer-language { position: relative; text-align: start; }
-.footer-language-toggle { display: flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; border-radius: 999px; color: var(--text); opacity: 0.45; cursor: pointer; list-style: none; transition: opacity 0.2s ease, color 0.2s ease; }
-.footer-language-toggle::-webkit-details-marker { display: none; }
-.footer-language-toggle svg { width: 0.9rem; height: 0.9rem; }
-.footer-language-toggle:hover, .footer-language[open] .footer-language-toggle { opacity: 0.8; color: var(--primary); }
-.footer-language-toggle:focus-visible { opacity: 0.8; outline: 2px solid var(--primary); outline-offset: 2px; }
-.footer-language-menu { position: absolute; bottom: calc(100% + 0.65rem); right: 0; z-index: 10; min-width: 10rem; max-width: min(18rem, calc(100vw - 4rem)); max-height: min(22rem, 60vh); overflow-y: auto; padding: 0.35rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); box-shadow: 0 4px 18px #0001; }
-.footer-language-menu a { display: block; padding: 0.5rem 0.65rem; border-radius: 4px; font-size: 0.8rem; text-decoration: none; white-space: nowrap; }
-.footer-language-menu a:hover, .footer-language-menu a:focus-visible { background: var(--code-bg); color: var(--primary); }
-.footer-language-menu a[aria-current="page"] { color: var(--primary); background: var(--code-bg); }
 </style></head><body><div class="container"><main><article><h1><a href="/blog/" class="back-icon" title="返回首页" aria-label="返回首页"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></a>paperrss-sponsors</h1><p class="post-date">2026-09-08</p><div class="markdown"><p><img src="/blog/assets/Pasted image 20260908161654.png" alt="Pasted image 20260908161654.png" width="80" style="border-radius: 16px" loading="lazy" decoding="async"><br>
 以下是对于本项目进行过打赏支持的名单，金额随有大小，善意却无边界。<br>
 排名不分先后，感谢支持PaperRss开源的每一位朋友💙</p>
