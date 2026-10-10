@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>(()=>{try{const v=localStorage.getItem('paper-theme');if(v==='light'||v==='dark'){document.documentElement.dataset.theme=v}}catch(_e){}})();</script><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="theme-color" content="#D97757"><link rel="icon" href="/blog/assets/favicon.ico"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous"><title>Paper Blog</title><style>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>(()=>{try{const v=localStorage.getItem('paper-theme');if(v==='light'||v==='dark'){document.documentElement.dataset.theme=v}}catch(_e){}})();</script><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="theme-color" content="#D97757"><link rel="icon" href="/blog/assets/favicon.ico"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous"><title>Paper Blog</title><meta name="description" content="ohmyangboy 你好👋，我是 Yang，是一个还不算独立的开发 偶尔vibe一会儿coding，经常用相机保存具体生活 这里记录我关于我、我对世界的接触和一些有趣的东西 你也可以在github 和社交媒体 找到我，或者订阅我的RSS （paper-blog自动生成的RSS链接） 这些我目前正在探索的项目和事情，我称为Paper 系列——因为如今AI和…"><meta property="og:title" content="Paper Blog"><meta property="og:site_name" content="Paper Blog"><meta property="og:description" content="ohmyangboy 你好👋，我是 Yang，是一个还不算独立的开发 偶尔vibe一会儿coding，经常用相机保存具体生活 这里记录我关于我、我对世界的接触和一些有趣的东西 你也可以在github 和社交媒体 找到我，或者订阅我的RSS （paper-blog自动生成的RSS链接） 这些我目前正在探索的项目和事情，我称为Paper 系列——因为如今AI和…"><meta property="og:type" content="website"><meta property="og:locale" content="zh_CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Paper Blog"><meta name="twitter:description" content="ohmyangboy 你好👋，我是 Yang，是一个还不算独立的开发 偶尔vibe一会儿coding，经常用相机保存具体生活 这里记录我关于我、我对世界的接触和一些有趣的东西 你也可以在github 和社交媒体 找到我，或者订阅我的RSS （paper-blog自动生成的RSS链接） 这些我目前正在探索的项目和事情，我称为Paper 系列——因为如今AI和…"><meta property="og:url" content="https://ohmyangboy.github.io/blog/"><meta property="og:image" content="https://ohmyangboy.github.io/blog/assets/og/3afa464c6899753840a5.png"><meta property="og:image:alt" content="Paper Blog"><meta name="twitter:image" content="https://ohmyangboy.github.io/blog/assets/og/3afa464c6899753840a5.png"><meta name="twitter:image:alt" content="Paper Blog"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><link rel="canonical" href="https://ohmyangboy.github.io/blog/"><style>
 :root {
   --primary: #D97757;
   --bg: #ffffff;
@@ -113,7 +113,8 @@ footer { margin-top: 4rem; text-align: center; }
 .markdown tbody tr:nth-child(even) td { background-color: var(--code-bg); }
 .markdown hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 .markdown :not(pre) > code { white-space: nowrap; }
-.markdown img { display: block; max-width: 100%; height: auto; margin-inline: auto; border: 1px solid var(--border); border-radius: var(--image-radius, 8px); cursor: zoom-in; }
+.markdown img { display: block; max-width: 100%; height: auto; margin-inline: auto; border: 0; border-radius: var(--image-radius, 8px); cursor: zoom-in; }
+.markdown .paper-iframe { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; border: 0; margin-inline: auto; }
 .markdown img[data-align="left"], .markdown img.align-left { margin-left: 0; margin-right: auto; }
 .markdown img[data-align="right"], .markdown img.align-right { margin-left: auto; margin-right: 0; }
 .markdown img[data-align="center"], .markdown img.align-center { margin-inline: auto; }
@@ -211,7 +212,51 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .syntax-highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .syntax-highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .syntax-highlight .il { color: #666 } /* Literal.Number.Integer.Long */
-.syntax-highlight { background: transparent !important; }</style></head><body><div class="container home-container"><header><div class="markdown"><h1>ohmyangboy</h1>
+.syntax-highlight { background: transparent !important; }
+.paper-video { position: relative; display: block; width: 130%; max-width: calc(100vw - 3rem); aspect-ratio: var(--video-ratio, 16 / 9); margin-left: 50%; transform: translateX(-50%); overflow: hidden; isolation: isolate; border: 0; outline: 0; box-shadow: none; border-radius: var(--video-radius, 0px); background: var(--code-bg, #eee); color: #fff; }
+.paper-video[data-align="left"] { margin-left: 0; transform: none; }
+.paper-video[data-align="right"] { margin-left: 100%; transform: translateX(-100%); }
+.paper-video video, .paper-video iframe { display: block; width: 100%; height: 100%; object-fit: contain; border: 0; }
+.paper-video iframe { position: absolute; top: -1px; left: -1px; width: calc(100% + 2px); height: calc(100% + 2px); }
+.paper-video .video-start, .paper-video .video-controls, .paper-video .video-status, .paper-video .video-fallback { display: none; }
+.paper-video button { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #fff; cursor: pointer; }
+.paper-video button:hover { background: rgba(255,255,255,.16); }
+.paper-video button:focus-visible, .paper-video input:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.paper-video .video-icon { width: 20px; height: 20px; }
+.paper-video .video-icon-pause, .paper-video .video-icon-sound { display: none; }
+.paper-video[data-playing="true"] .video-toggle .video-icon-play, .paper-video[data-muted="false"] .video-icon-muted { display: none; }
+.paper-video[data-playing="true"] .video-toggle .video-icon-pause, .paper-video[data-muted="false"] .video-icon-sound { display: block; }
+.paper-video[data-enhanced] .video-controls { display: flex; position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); align-items: center; gap: 8px; width: calc(100% - 32px); max-width: 460px; padding: 6px 10px; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; background: rgba(25,25,28,.78); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 4px 24px rgba(0,0,0,.16); opacity: 0; pointer-events: none; transition: opacity .2s; }
+.paper-video[data-enhanced] .video-start { display: inline-flex; position: absolute; inset: 0; margin: auto; width: 64px; height: 64px; background: rgba(25,25,28,.65); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.2); opacity: 0; pointer-events: none; transition: opacity .2s; }
+.paper-video .video-start .video-icon { width: 28px; height: 28px; }
+.paper-video[data-playing="true"] .video-start { display: none; }
+@media (hover: hover) { .paper-video:hover .video-controls, .paper-video:hover .video-start { opacity: 1; pointer-events: auto; } }
+.paper-video:has(:focus-visible) .video-controls, .paper-video:focus-visible .video-controls, .paper-video:has(:focus-visible) .video-start, .paper-video:focus-visible .video-start { opacity: 1; pointer-events: auto; }
+@media (hover: none) { .paper-video[data-recent] .video-controls, .paper-video:not([data-playing="true"]) .video-start { opacity: 1; pointer-events: auto; } }
+.paper-video .video-time { flex-shrink: 0; font-size: 11px; font-variant-numeric: tabular-nums; color: #f4f4f5; }
+.paper-video .video-seek { flex: 1; min-width: 24px; width: 100%; height: 24px; margin: 0; accent-color: #fff; cursor: pointer; }
+.paper-video[data-error] .video-status, .paper-video[data-loading] .video-status { display: block; position: absolute; top: 35%; left: 12px; right: 12px; padding: 8px 12px; border-radius: 8px; background: rgba(25,25,28,.9); color: #fff; text-align: center; font-size: .875rem; }
+.paper-video[data-error] .video-start, .paper-video[data-error] .video-controls { display: none; }
+.paper-video[data-error] .video-fallback { display: block; position: absolute; top: 55%; left: 50%; transform: translateX(-50%); width: max-content; max-width: calc(100% - 24px); padding: 8px 12px; border-radius: 8px; background: rgba(25,25,28,.9); text-align: center; color: #fff; font-size: .875rem; }
+.missing-video { display: inline-block; padding: .5rem .75rem; border: 1px dashed var(--border); border-radius: 6px; color: var(--subtext); background: var(--code-bg); }
+.paper-video:fullscreen { width: 100%; max-width: none; height: 100%; margin: 0; transform: none; border-radius: 0; aspect-ratio: auto; background: #111; }
+body.paper-video-expanded { overflow: hidden; }
+.paper-video[data-expanded] { position: fixed; inset: 0; z-index: 1000; width: 100vw !important; max-width: none; height: 100dvh; margin: 0; transform: none; border-radius: 0; aspect-ratio: auto; background: #111; }
+@media (max-width: 640px) { .paper-video { width: 100%; max-width: 100%; } }
+@media (max-width: 480px) { .paper-video[data-enhanced] .video-controls { bottom: 8px; gap: 4px; width: calc(100% - 16px); padding: 4px 6px; } .paper-video button { width: 32px; height: 32px; } .paper-video .video-time { font-size: 10px; } .paper-video[data-enhanced] .video-start { width: 48px; height: 48px; } }
+@media (prefers-reduced-motion: reduce) { .paper-video .video-controls { transition: none; } }
+
+.footer-language { position: relative; text-align: start; }
+.footer-language-toggle { display: flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; border-radius: 999px; color: var(--text); opacity: 0.45; cursor: pointer; list-style: none; transition: opacity 0.2s ease, color 0.2s ease; }
+.footer-language-toggle::-webkit-details-marker { display: none; }
+.footer-language-toggle svg { width: 0.9rem; height: 0.9rem; }
+.footer-language-toggle:hover, .footer-language[open] .footer-language-toggle { opacity: 0.8; color: var(--primary); }
+.footer-language-toggle:focus-visible { opacity: 0.8; outline: 2px solid var(--primary); outline-offset: 2px; }
+.footer-language-menu { position: absolute; bottom: calc(100% + 0.65rem); right: 0; z-index: 10; min-width: 10rem; max-width: min(18rem, calc(100vw - 4rem)); max-height: min(22rem, 60vh); overflow-y: auto; padding: 0.35rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); box-shadow: 0 4px 18px #0001; }
+.footer-language-menu a { display: block; padding: 0.5rem 0.65rem; border-radius: 4px; font-size: 0.8rem; text-decoration: none; white-space: nowrap; }
+.footer-language-menu a:hover, .footer-language-menu a:focus-visible { background: var(--code-bg); color: var(--primary); }
+.footer-language-menu a[aria-current="page"] { color: var(--primary); background: var(--code-bg); }
+</style></head><body><div class="container home-container"><header><div class="markdown"><h1>ohmyangboy</h1>
 <p>你好👋，我是 Yang，是一个还不算独立的开发<br>
 偶尔vibe一会儿coding，经常用相机保存具体生活<br>
 这里记录我关于我、我对世界的接触和一些有趣的东西</p>
